@@ -1,0 +1,41 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title file generator
+  script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js')
+  script.
+    $(function(){
+    $("#btn").on("click",()=>{
+    $(".info").toggleClass("info1")
+    });
+    $("#btn1").on("click" , ()=>{
+    $("body").toggleClass("view1")
+    });
+    });
+  script(src='backend.js')
+  style
+    include style.css
+.class
+  nav
+    |             Welcome to file generator
+.about
+  p#btn Info
+.about1
+  p#btn1 Change View
+.info
+  p
+    | It is a simple web application which automatically generate .txt file 
+    br
+    |  and the data you enter here save in a
+    |             text file automatically 
+    br
+    |             file have the same name as the name of the person
+.container
+  form( method='post')
+    input(type='name' placeholder='enter name' name='name')
+    input(type='phone' placeholder='enter the phone number' name='phone')
+    input(type='age' placeholder='enter the age' name='age')
+    textarea#adress(name='address' cols='30' rows='10' placeholder='enter the address')
+    textarea(name='text' cols='30' rows='10' placeholder='enter more info if you want')
+    button(type='submit')  Submit 
