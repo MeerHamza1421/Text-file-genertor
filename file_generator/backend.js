@@ -33,11 +33,11 @@ the age is "${data.age}"
 the address is "${data.address}"
 other info about it is"${data.text}" `;
   res.status(200).render('index.pug');
-  //to create or update file of the name of the person
+  // to create or update file of the name of the person
   // ../file_creator/views give the path of the directory
   // you would change it according to your folder
 
-  fs.writeFileSync(`../file_creator/views/${data.name}.txt`, info);
+  fs.writeFileSync(`${data.name}.txt`, info);
 
 });
 
